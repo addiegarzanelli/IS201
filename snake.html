@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riddle Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f8ff;
+            padding: 50px;
+        }
+
+        h1 {
+            color: #4CAF50;
+        }
+
+        .riddle {
+            font-size: 24px;
+            margin: 20px 0;
+        }
+
+        .answer {
+            display: none;
+            font-size: 20px;
+            color: #2c3e50;
+            margin-top: 20px;
+        }
+
+        .button {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #2980b9;
+        }
+
+        .answer-btn {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+
+        .answer-btn:hover {
+            background-color: #27ae60;
+        }
+
+        .background {
+            background-size: cover;
+        }
+    </style>
+</head>
+<body background="images/Riddle Background.jpg" class="background">
+
+    <h1>Riddle Generator</h1>
+    <div id="riddle" class="riddle">Click below for a riddle!</div>
+    <button id="generateRiddle" class="button">Get a Riddle</button>
+    <div id="answer" class="answer"></div>
+    <button id="showAnswer" class="answer-btn">Show Answer</button>
+
+    <script>
+        const riddles = [
+            {
+                question: "What has keys but can't open locks?",
+                answer: "A piano"
+            },
+            {
+                question: "I speak without a mouth and hear without ears. I have no body, but I come alive with wind. What am I?",
+                answer: "An echo"
+            },
+            {
+                question: "The more of this there is, the less you see. What is it?",
+                answer: "Darkness"
+            },
+            {
+                question: "What can travel around the world while staying in the corner?",
+                answer: "A stamp"
+            },
+            {
+                question: "What gets wetter the more it dries?",
+                answer: "A towel"
+            }
+        ];
+
+        // Function to generate a random riddle
+        function generateRiddle() {
+            const randomIndex = Math.floor(Math.random() * riddles.length);
+            const riddle = riddles[randomIndex];
+            
+            // Display the riddle
+            document.getElementById("riddle").textContent = riddle.question;
+            
+            // Clear previous answer
+            document.getElementById("answer").textContent = "";
+            
+            // Hide the answer initially
+            document.getElementById("answer").style.display = "none";
+        }
+
+        // Function to show the answer
+        function showAnswer() {
+            const currentRiddle = document.getElementById("riddle").textContent;
+            const riddle = riddles.find(r => r.question === currentRiddle);
+            document.getElementById("answer").textContent = "Answer: " + riddle.answer;
+            document.getElementById("answer").style.display = "block";
+        }
+
+        // Set event listeners
+        document.getElementById("generateRiddle").addEventListener("click", generateRiddle);
+        document.getElementById("showAnswer").addEventListener("click", showAnswer);
+    </script>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <a href="scratch.html">Back to Scratch Page</a>
+</body>
+</html>
