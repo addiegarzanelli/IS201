@@ -1,0 +1,31 @@
+.body {
+    margin: 30px;
+    padding: 10px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.unorderedlist {
+    list-style-type: disc;
+    padding: 10px;
+    text-align: left;
+    margin: 30px; 
+}
+.contents{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: left;
+    color: rgb(0, 65, 121);
+    margin-bottom: 20px;
+}
+.shows{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+    color: brown;
+    margin-bottom: 20px;
+}
+.youtube{
+    font-family: sans-serif;
+    text-align: left;
+    color: rgb(111, 27, 191);
+    border-radius: 10px;
+}
